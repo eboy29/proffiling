@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+  background-color: #eaf4fc;
+  overflow: visible;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 58px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+
+
+/* FOR CUSTOM CSS */
+
+.sidebar1 {
+  background-color: #092c49;
+}
+
+span {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.navbar1 {
+  background-color: #105a97;
+}
+
+
+.dboard {
+  background-color: #2471af;
+}
+
+
+.alert-success {
+  height: 5rem;
+}
+
+#alerter {
+  display: none;
+}
+
+.modal-lg {
+  max-width: 1000px !important;
+  border: 1px solid black !important;
+}
+
+.preview {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  border: 1px solid red;
+}
